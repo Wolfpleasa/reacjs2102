@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bai 9 -->
+    <div>Thời gian hiện tại: <br>
+        <span>Giờ: </span><span id="Hour">00</span><br>
+        <span>Phút: </span><span id="Min">00</span><br>
+        <span>Giây: </span><span id="Sec">00</span>
+    </div>
+
+    <script>
+        function clock() {
+            var hour = document.getElementById("Hour");
+            var min = document.getElementById("Min");
+            var sec = document.getElementById("Sec");
+            var today = new Date();
+            var gio = today.getHours();
+            var phut = today.getMinutes();
+            var giay = today.getSeconds();
+            hour.innerHTML = gio;
+            min.innerHTML = phut;
+            sec.innerHTML = giay;
+        }
+        setInterval(clock, 1000);
+    </script>
+</body>
+
+</html>

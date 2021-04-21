@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bai7 -->
+    <label for="color">Choose color:</label>
+    <select name="color" id="c">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Brown">Brown</option>
+        <option value="Lavender">Lavender</option>
+    </select>
+    <br>
+    <input type="submit" value="submit" onclick="change()">
+    <script>
+        function change() {
+            var color = document.getElementById("c");
+            document.body.style = `background-color: ${c.value} `;
+        }
+    </script>
+</body>
+
+</html>

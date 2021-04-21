@@ -217,19 +217,6 @@
 // if (OK === 1) console.log("YES");
 // else console.log("NO");
 
-// function tinh(arr) {
-//     arr.sort();
-//     for (var i = 0; i < arr.length; i++) {
-//         var j = i + 1;
-//         var n = arr.length - 1
-//         if (arr[i] + arr[j] + arr[n] === k) return true;
-//         (arr[i] + arr[j] + arr[n] - k > 0) ? j++ : n--;
-//     }
-//     return false;
-// }
-// if (tinh(arr)) console.log("YES");
-// else console.log("NO");
-
 //bai32
 // var arr = [1, 3, 6, 9, 11, 20];
 // var k = 13;

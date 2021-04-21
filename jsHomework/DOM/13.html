@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bai 13 -->
+    <div>Thời gian hiện tại: <br>
+        <span id="Sec">00</span><br>
+        <span id="miliSec">00</span><br>
+        <button id="Start">Start</button>
+        <button id="Reset">Reset</button>
+        <button id="Stop">Stop</button>
+    </div>
+
+    <script>
+        var miliSec = document.getElementById("miliSec");
+        var sec = document.getElementById("Sec");
+        var start = document.getElementById("Start");
+        var reset = document.getElementById("Reset");
+        var stopa = document.getElementById("Stop");
+        var second = 00;
+        var miliSecond = 00;
+        var Interval;
+        start.addEventListener("click", () => {
+            clearInterval(Interval);
+            Interval = setInterval(batDau, 10);
+        });
+
+        function batDau() {
+            miliSecond++;
+            miliSec.innerHTML = miliSecond;
+            if (miliSecond == 100) {
+                miliSecond = 0;
+                second++;
+                miliSec.innerHTML = miliSecond;
+                sec.innerHTML = second;
+            }
+        }
+
+        reset.addEventListener("click", () => {
+            clearInterval(Interval);
+            second = "00";
+            miliSecond = "00";
+            miliSec.innerHTML = miliSecond;
+            sec.innerHTML = second;
+        })
+        stopa.onclick = dung;
+
+        function dung() {
+            clearInterval(Interval);
+        }
+    </script>
+</body>
+
+</html>
